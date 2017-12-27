@@ -1,0 +1,27 @@
+package by.htp.belaya.logic;
+
+import by.htp.belaya.bean.Flower;
+import by.htp.belaya.bean.Petal;
+import by.htp.belaya.bean.Bud;
+
+public class BotanicEnciclopedy {
+
+	public void printFlowerInfo(Flower flower) {
+		if (flower != null) {
+			System.out.println("Title: " + flower.getTitle());
+			System.out.println("bud size: " + flower.getBud().getSize() + ", bud color: " + flower.getBud().getColor());
+			System.out.println("stem height: " + flower.getStem().getHeight() + ", stem width:" + flower.getStem().getWidth());
+			printPetals(flower.getBud());
+		}
+	}
+
+	private void printPetals(Bud bud) {
+		Petal[] petals = bud.getPetals();
+		if (bud != null && petals != null) {
+			for (Petal petal : petals) {
+				System.out.println("color: " + petal.getColor() + ", shape: " + petal.getShape());
+			}
+		}
+	}
+
+}
