@@ -1,8 +1,7 @@
 package by.htp.belaya.logic;
 
-import by.htp.belaya.logic.Option;
-import by.htp.belaya.bean.Petal;
-import by.htp.belaya.bean.Bud;
+import by.htp.belaya.bean.*;
+
 
 public class FortuneTeller {
 	private String event;
@@ -10,7 +9,6 @@ public class FortuneTeller {
 	private int optionsNum;
 	
 	int count = 0;
-
 	
 	public FortuneTeller (String event, int optionsNum)
 	{
@@ -22,15 +20,30 @@ public class FortuneTeller {
 	public void addOption (Option option) {
 		if (count < optionsNum) {
 			options[count] = option;
-			count = count++;
-			
+			count = count++;			
 		}
+	}	
+	
+
+	public Option[] getOptions() {
+		return options;
 	}
-	public void guessEvent(Option option)
+	
+		public void guessEvent (FortuneTeller fortuneTeller)
 	{
-		for (int i=0; i < optionsNum; i++)
-		{
-			options[i];
+		Petal[] petals = flower.getBud().getPetals();		
+		int countPetal =0;
+			for (int i= 0; i< petals.length; i++)
+			{ if (i == petals.length -1)
+			{
+				countPetal = countPetal-1;				
+				System.out.println(options[countPetal]);				
+			};			
+			countPetal = countPetal+1;
+			if (i == optionsNum - 1) {
+				countPetal = 0;
+			}
 		}
 	}
 }
+		
