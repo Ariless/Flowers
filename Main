@@ -3,31 +3,26 @@ package by.htp.belaya.runner;
 import by.htp.belaya.bean.*;
 import by.htp.belaya.logic.*;
 
-
 public class Main {
 
 	public static void main(String[] args) {
-		Flower flower = new  Flower ("Cammomile", 10, 1);
-		
+		Flower flower = new Flower("Cammomile", 10, 1);
+
 		BotanicEnciclopedy enc = new BotanicEnciclopedy();
-		
-//		enc.printFlowerInfo(flower);
-//		
-//		flower.grow(25, 5, 3);
-//		enc.printFlowerInfo(flower);
-		
-		flower.bloom(5, "yellow" );
+
+		// enc.printFlowerInfo(flower);
+		//
+		// flower.grow(25, 5, 3);
+		// enc.printFlowerInfo(flower);
+
+		flower.bloom(5, "yellow");
 		enc.printFlowerInfo(flower);
-		
-//		flower.wither(1, "grey");
-//		enc.printFlowerInfo(flower);
-		
-		FortuneTeller fortuneLove = new FortuneTeller ("Love", 3);
-		fortuneLove.addOption(new Option("he loves you "));
-		fortuneLove.addOption(new Option("he doesn't love you "));
-		fortuneLove.addOption(new Option("he'll kiss you"));	
-		
-		
+
+		// flower.wither(1, "grey");
+		// enc.printFlowerInfo(flower);
+
+		FortuneTeller fortune = new FortuneTeller();
+		fortune.guessEvent(flower);
 
 	}
 
