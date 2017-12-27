@@ -14,7 +14,7 @@ public class FortuneTeller {
 
 		for (int i = 0; i < event.length; i++) {
 			int countPetal = 0;
-			// for (int j = 0; j < option.length; j++) {
+
 			for (int n = 0; n < petals.length; n++) {
 				if (n == petals.length - 1) {
 					countPetal = countPetal - 1;
