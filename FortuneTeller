@@ -2,48 +2,32 @@ package by.htp.belaya.logic;
 
 import by.htp.belaya.bean.*;
 
-
 public class FortuneTeller {
-	private String event;
-	private Option[] options;
-	private int optionsNum;
-	
-	int count = 0;
-	
-	public FortuneTeller (String event, int optionsNum)
-	{
-		this.event = event;
-		this.optionsNum=optionsNum;
-		this.options = new Option [optionsNum];
-	}
-	
-	public void addOption (Option option) {
-		if (count < optionsNum) {
-			options[count] = option;
-			count = count++;			
-		}
-	}	
-	
 
-	public Option[] getOptions() {
-		return options;
-	}
-	
-		public void guessEvent (FortuneTeller fortuneTeller)
-	{
-		Petal[] petals = flower.getBud().getPetals();		
-		int countPetal =0;
-			for (int i= 0; i< petals.length; i++)
-			{ if (i == petals.length -1)
-			{
-				countPetal = countPetal-1;				
-				System.out.println(options[countPetal]);				
-			};			
-			countPetal = countPetal+1;
-			if (i == optionsNum - 1) {
-				countPetal = 0;
+	String[][] option = { { "Somebody loves you", "Somebody hates you", "Somebody will kiss you", },
+			{ "You'll recieve an inheritage", "You'll lose your money", "You'll win a lottery" }, };
+
+	String[] event = { "love", "money" };
+
+	public void guessEvent(Flower flower) {
+		Petal[] petals = flower.getBud().getPetals();
+
+		for (int i = 0; i < event.length; i++) {
+			int countPetal = 0;
+			// for (int j = 0; j < option.length; j++) {
+			for (int n = 0; n < petals.length; n++) {
+				if (n == petals.length - 1) {
+					countPetal = countPetal - 1;
+					System.out.println(option[i][countPetal]);
+				}
+				;
+				countPetal = countPetal + 1;
+				if (n == option[i].length - 1) {
+					countPetal = 0;
+				}
+
 			}
 		}
 	}
+
 }
-		
