@@ -1,0 +1,67 @@
+package by.htp.belaya.bean;
+
+import by.htp.belaya.bean.Petal;
+
+public class Bud {
+	
+	private static final String DEFAULT_BUD_COLOR = "green";
+	private static final int DEFAULT_BUD_SIZE =1;
+	
+	private String color;
+	private int size;
+	private Petal[] petals;
+	
+	 Bud ()
+	{
+		color = DEFAULT_BUD_COLOR;
+		size =DEFAULT_BUD_SIZE; 
+		
+	}
+	
+//	alt+shift+s - generate getters and setters
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
+	 void addFreshPetals(int petalNumber, String petalColor, String petalShape)
+	{
+		if (petals == null)
+		{
+			petals = new Petal[petalNumber];
+			for (int i= 0;i< petalNumber; i++)
+			{
+				petals[i]=new Petal(petalColor, petalShape);
+			}
+		}
+	}
+
+	public Petal[] getPetals() {
+		return petals;
+	}
+	
+	 void lostPetals (int petalNumber, String petalColor, String petalShape)
+	{if (petals != null)
+	{
+
+		for (int i= 0;i<petalNumber; i++)
+		{
+			petals[i]=new Petal(petalColor, petalShape);
+		}
+	}
+	} 
+	 
+
+}
