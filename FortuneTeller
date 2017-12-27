@@ -1,0 +1,36 @@
+package by.htp.belaya.logic;
+
+import by.htp.belaya.logic.Option;
+import by.htp.belaya.bean.Petal;
+import by.htp.belaya.bean.Bud;
+
+public class FortuneTeller {
+	private String event;
+	private Option[] options;
+	private int optionsNum;
+	
+	int count = 0;
+
+	
+	public FortuneTeller (String event, int optionsNum)
+	{
+		this.event = event;
+		this.optionsNum=optionsNum;
+		this.options = new Option [optionsNum];
+	}
+	
+	public void addOption (Option option) {
+		if (count < optionsNum) {
+			options[count] = option;
+			count = count++;
+			
+		}
+	}
+	public void guessEvent(Option option)
+	{
+		for (int i=0; i < optionsNum; i++)
+		{
+			options[i];
+		}
+	}
+}
