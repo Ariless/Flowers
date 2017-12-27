@@ -52,16 +52,16 @@ public class Bud {
 		return petals;
 	}
 	
-	 void lostPetals (int petalNumber, String petalColor, String petalShape)
-	{if (petals != null)
-	{
-
-		for (int i= 0;i<petalNumber; i++)
-		{
-			petals[i]=new Petal(petalColor, petalShape);
-		}
-	}
-	} 
+//	 void lostPetals (int petalNumber, String petalColor, String petalShape)
+//	{if (petals != null)
+//	{
+//
+//		for (int i= 0;i<petalNumber; i++)
+//		{
+//			petals[i]=new Petal(petalColor, petalShape);
+//		}
+//	}
+//	} 
 	 
 
 }
