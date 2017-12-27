@@ -57,11 +57,11 @@ public class Flower {
 		bud.setColor(newBudColor);
 		bud.addFreshPetals(7,"white", "ellipse");
 	}
-	public void wither (int newBudSize, String newBudColor)
-	{
-		bud.setSize(newBudSize);
-		bud.setColor(newBudColor);
-		bud.lostPetals(3, "brown", "wave");
-	}
+//	public void wither (int newBudSize, String newBudColor)
+//	{
+//		bud.setSize(newBudSize);
+//		bud.setColor(newBudColor);
+//		bud.lostPetals(3, "brown", "wave");
+//	}
 
 }
