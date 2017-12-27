@@ -1,0 +1,22 @@
+package by.htp.belaya.logic;
+
+public class Option {
+
+	private String option;
+	
+	Option (String option)
+	{
+		this.option=option;
+		
+	}
+
+	public String getName() {
+		return option;
+	}
+
+	public void setName(String option) {
+		this.option = option;
+	}
+	
+	
+}
